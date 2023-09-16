@@ -30,13 +30,14 @@ function checkEmail(input) {
 
 // Check required fields
 function checkRequired(inputArr) {
-    inputArr.forEach(function(input) {
+    //high order array method: Method that you can attach to arrays, they take in a callback function
+    inputArr.forEach(function (input) {
         if (input.value.trim() === '') {
             showError(input, `${getFieldName(input)} is required`);
         } else {
             showSuccess(input);
         }
-    });
+    }); //looping through the array and checks each input
 }
 
 // Check required length
@@ -72,7 +73,8 @@ function getFieldName(input) {
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    checkRequired([username, email, password, password2]);
+    
+    checkRequired([username, email, password, password2]); //passing in an array of inputs
     checkLength(username, 3, 15);
     checkLength(password, 6, 25);
     checkEmail(email);
