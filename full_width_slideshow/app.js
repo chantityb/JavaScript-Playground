@@ -1,5 +1,6 @@
-<<<<<<< HEAD
+document.querySelector('.banner button').addEventListener('click', () => {
+    document.querySelector('.banner').style.display = 'none';
+    document.querySelector('.slideshow-wrapper').style.cssText = 'opacity: 1; visibility: visible';
+    document.querySelector('.slideshow').style.animation = 'slideshow 24s infinite';
+});
 
-=======
-
->>>>>>> 37c823bf6e9f649894a1b8d7d24e3f1560546d32

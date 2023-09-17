@@ -5,8 +5,8 @@
 
 .container {
     width: 100%;
-    height: 100vh;
-    /* background-color: #000; */
+    height: 125vh;
+    background-color: #000;
 }
 
 .banner {
@@ -16,7 +16,7 @@
     transform: translateX(-50%);
     text-align: center; 
     overflow: hidden;  
-    display: none; 
+    /* display: none;  */
 }
 
 .banner::after {
@@ -93,6 +93,11 @@
 
 .slideshow-wrapper {
     overflow: hidden;
+    opacity: 0;    
+    visibility: hidden;
+    transition: opacity 1s;
+
+    /* overflow: hidden; */
 }
 
 .slideshow {
@@ -100,7 +105,6 @@
     width: 400%;
     height: 100%;
     position: relative;
-    animation: slideshow 24s infinite;
 }
 
 @keyframes slideshow {
@@ -121,7 +125,7 @@
 
 .slide {
     width: 100%;
-    height: 100vh;
+    height: 125vh;
 }
 
 .slide:nth-child(1) {
@@ -182,4 +186,60 @@
 
 .content i {
     margin-left: 8px;
+}
+
+@media(max-width: 1000px) {
+    .banner h1 {
+        font-size: 80px;
+    }
+
+}
+    
+@media (max-width: 700px) {
+    .banner h1 {
+        font-size: 60px;
+    }
+
+    .banner button {
+        width: 180px;
+        padding: 7px;
+        font-size: 20px;
+
+    }
+
+    .content {
+        width: 300px;
+    }
+
+    .content h3 {
+        font-size: 30px;
+    }
+
+    .content p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .banner h1 {
+        font-size: 40px;
+    }
+
+    .banner button {
+        width: 150px;
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .content {
+        width: 250px;
+    }
+
+    .content h3 {
+        font-size: 25px;
+    }
+
+    .content p {
+        font-size: 12px;
+    }
 }
